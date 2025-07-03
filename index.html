@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To My Mila 🌹</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&family=Lora:wght@400;700&display=swap');
+body {
+  background: linear-gradient(135deg, #2d0617 0%, #660022 100%);
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  width: 570px;
+  /* height: 850px; */      /* Remove or comment out this line */
+  background: #232224;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(102, 0, 34, 0.3);
+  /* overflow-y: auto; */   /* Remove or comment out this line */
+  position: relative;
+  text-align: center;
+}
+.footer {
+  /* width: 100%; */         /* Remove or comment out this line */
+  box-sizing: border-box;    /* Add this line */
+  padding: 15px;
+  background: #7a1431;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.header {
+  background: linear-gradient(to right, #a31d3a, #7a1431);
+  padding: 25px;
+  color: white;
+}
+
+.photo-placeholder {
+  width: 200px;
+  height: 200px;
+  margin: 25px auto;
+  border: 3px dashed #a31d3a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2d0617;
+  color: #a31d3a;
+  font-style: italic;
+}
+
+.message {
+  padding: 0 40px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0d7c6;
+}
+
+.quote {
+  font-style: italic;
+  margin: 25px 0;
+  color: #ff6b9d;
+  font-size: 1.2rem;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+}
+
+ /* Floating hearts animation */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.85;
+      z-index: 1;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+     
+    }
+     .floating-text {
+  position: fixed;
+  font-size: 2.2rem;
+  font-weight: bold;
+  animation: float 8s linear infinite;
+  opacity: 0.95;
+  z-index: 2;
+  pointer-events: none;
+  top: 100vh;
+  text-shadow: 1px 1px 4px #0002;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
+#play-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  background: #a31d3a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+.scroll-message {
+  max-height: 180px;
+  overflow-y: auto;
+  padding: 18px;
+  margin: 18px 0;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  color: #fce4ec;
+  font-size: 1.05rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.08);
+  scrollbar-width: thin;
+  scrollbar-color: #ff99cc #2d0617;
+  animation: fadeIn 1.5s;
+}
+.scroll-message::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-message::-webkit-scrollbar-thumb {
+  background-color: #ff99cc;
+  border-radius: 10px;
+}
+.fade-in {
+  animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.header h1 {
+  font-family: 'Dancing Script', 'Great Vibes', cursive;
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+}
+
+.quote {
+  font-family: 'Great Vibes', 'Dancing Script', cursive;
+  font-size: 1.5rem;
+}
+
+body, .message, .footer {
+  font-family: 'Lora', 'Poppins', serif;
+}
+  </style>
+</head>
+<body>
+
+ <!-- Floating hearts and "I love you" text -->
+<script>
+  const texts = [
+    {text: 'I love you', color: 'red'},
+    {text: 'I love you', color: 'white'}
+  ];
+  for (let i = 0; i < 30; i++) {
+  if (Math.random() < 0.7) {
+    // Heart (as before)
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+    heart.style.background = ['#ff6b9d', '#ff99cc', '#ffc0cb'][Math.floor(Math.random() * 3)];
+    document.body.appendChild(heart);
+  } else {
+    // Floating "I love you" text
+    const t = texts[Math.floor(Math.random() * texts.length)];
+    const floating = document.createElement('div');
+    floating.className = 'floating-text';
+    floating.textContent = t.text;
+    floating.style.color = t.color;
+    floating.style.left = Math.random() * 100 + 'vw';
+    floating.style.animationDuration = 5 + Math.random() * 5 + 's';
+    document.body.appendChild(floating);
+  }
+}
+</script>
+
+</sript>
+  </script>
+ <!-- Embed Background Music -->
+<button id="play-btn">▶️ Tap to Play Music</button>
+<audio id="bg-music" hidden loop autoplay>
+  <source src="https://dl.dropboxusercontent.com/scl/fi/1784p319v8vq2v0gkntod/Harry-Styles-Adore-You-Official-Audio.mp3?rlkey=wsjzwzqwjv9f99htre3j1j7bi&st=s9cnkhv5" type="audio/mpeg">
+</audio>
+<script>
+  const btn = document.getElementById('play-btn');
+  const audio = document.getElementById('bg-music');
+  // Try to autoplay on page load
+  window.addEventListener('DOMContentLoaded', function() {
+    audio.play().catch(() => {
+      // Autoplay failed, show button as fallback
+      btn.style.display = 'block';
+    });
+  });
+  btn.addEventListener('click', function() {
+    audio.play();
+    btn.style.display = 'none';
+  });
+</script>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <h1>🌹 To My Mila</h1>
+      <div class="subtitle">Temilade's Special Day</div>
+    </div>
+    
+    <div class="photo-placeholder">
+      <img src="https://dl.dropboxusercontent.com/scl/fi/tfc1w8s8qtdqdgqqr0yhv/temilade.jpg?rlkey=4jkd9j7t90l48wq37jf0lrte0&st=26rmgeaj" alt="Temilade" class="profile-photo">
+    </div>
+    
+    
+    <div class="message">
+            <p>My dearest Temilade,</p>
+      <p>On this day, the universe gave me my greatest gift: <strong>YOU</strong>.</p>
+
+      <div class="scroll-message fade-in">
+        <p>Seventeen. A number that holds the magic of becoming—of stepping into the world with grace, strength, and wonder. And you, Temilade, wear it like a crown.👑</p>
+        <p>On this day, I don’t just celebrate your birth—I celebrate the light you bring into my life. Your laughter is my favorite melody, your smile my favorite sunrise. You are beauty in motion, kindness in bloom, and love in its purest form.❤️</p>
+        <p>You’ve taught me what it means to care deeply, to love without fear, and to dream without limits. And as you step into this new chapter, I hope you carry with you the truth of how deeply you are cherished—not just today, but always.</p>
+        <p>May your journey be filled with adventure 🗺️, your heart with joy 😊, and your spirit with the courage to chase your dreams ✨. Remember, you are never alone; I am always here, cheering you on, loving you fiercely. 💖</p>
+        <p>Keep shining, keep growing, and never forget how much you are loved—today and every day. Happy 17th Birthday, my Mila! 🎂🎉🌹</p>
+      </div>
+      
+      <div class="quote">
+        "Your name means 'wealth has come home'<br>
+        but you, my love, are the treasure that fills my world."
+      </div>
+      
+      <p>Every moment with you feels like coming home. Happy birthday to the woman who holds my heart.</p>
+      
+      <div class="yoruba">
+        Happy birthday, my love! ❤️<br>
+      </div>
+    </div>
+    
+    <div class="footer">
+      Forever yours, [OfficialTeamTos]
+    </div>
+  </div>
+</body>
+</html>
